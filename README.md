@@ -3,6 +3,7 @@
 
 
 ## 效果图
+![效果图](https://github.com/orangekingliness/image-folder/blob/master/wx-canlendar/wx-calendar2.png)
 
 ## 功能
 将微信小程序日历封装成组件进行调用，可以指定那些天可点击，适用于某些指定天数的日历场景。
