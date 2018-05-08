@@ -1,0 +1,57 @@
+<!--components/dataSelect/dataselect.wxml-->
+<view class='cover' hidden='{{!isShow}}'>
+  <view class='bg-cover' catchtap='hideCalender'></view>
+  <view class='content'>
+
+    <view class='tap'>
+      <scroll-view scroll-x class='scroll-view_H' style=''>
+        <view class="month-num {{currentItem == index? 'active' : ''}}" data-num="{{index}}" catchtap="toMonthNumFunc" wx:for="{{dayTitle}}" wx:key="{{dayTitle}}">{{item}}</view>
+      </scroll-view> 
+    </view>
+
+    <view class='title' id='title'>
+      <text class='weekday'>日</text><text>一</text><text>二</text><text>三</text><text>四</text><text>五</text><text>六</text>
+    </view>
+
+    <!-- s=轮播图 -->
+    <swiper style='height:680rpx;' circular="{{false}}" current='{{swiperIndex}}' bindchange="changeCurrentFunc">
+       <block wx:for="{{dayCon}}" wx:for-item="itemName" wx:key="{{dayCon}}">
+        <swiper-item>
+          <view class='date-title'>{{itemName.title}}</view>
+          <view class='date-content'>
+            <view class='day-item' wx:for="{{itemName.content}}" wx:key="{{itemName.content}}" wx:for-item="dayItem" wx:for-index="dayindex">
+              <view style='height:100%;' wx:if="{{dayItem.hasGroup}}">
+                <view class='has-group' catchtap='onSelectDayFunc' data-dayItem="{{dayItem}}">
+                  <block wx:if="{{dayItem.num == clickNum}}">
+                    <view class='click-active' catchtap='onSelectDayFunc' data-dayItem="{{dayItem}}">
+                      {{dayItem.num}}
+                      <view class='price' catchtap='onSelectDayFunc' data-dayItem="{{dayItem}}">¥{{dayItem.price}}</view>
+                       <!-- <view class='price' catchtap='onSelectDayFunc' data-dayItem="{{dayItem}}">余{{dayItem.surplus_num}}</view>  -->
+                    </view>
+                  </block>
+                  <block wx:else>
+                    {{dayItem.num}}
+                    <view class='price' catchtap='onSelectDayFunc' data-dayItem="{{dayItem}}">¥{{dayItem.price}}</view>
+                     <!-- <view class='price' catchtap='onSelectDayFunc' data-dayItem="{{dayItem}}">余{{dayItem.surplus_num}}</view>  -->
+                  </block>
+                  
+                </view>
+
+              
+              </view>
+              <view wx:else>
+                {{dayItem.num}}
+              </view>
+
+            </view>  
+      
+            <view class='clear'></view>
+          </view>
+        </swiper-item>
+      </block> 
+     </swiper>
+    <!-- e=轮播图 -->
+
+    <view class='btn' catchtap='_okFunc'>确定</view>
+  </view>
+</view>

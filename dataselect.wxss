@@ -1,0 +1,123 @@
+/* components/dataSelect/dataselect.wxss */
+swiper{background: #ffffff!important;}
+.cover{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 20;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5)
+}
+.bg-cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.content{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  z-index: 2;
+}
+
+.btn{
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  background: #f26f73;
+}
+
+.title{
+  display: flex;
+  height: 60rpx;
+  line-height: 30px;
+  background: #fff;
+  text-align: center;
+}
+.title text{
+  flex: 1;
+  font-size: 24rpx;
+}
+.weekday{
+  color:#f26f73;
+}
+
+.tap{
+  height: 35px;
+  line-height: 35px;
+  background: #fff;
+  border-bottom: 1rpx solid #ebebeb;
+}
+.scroll-view_H{
+  overflow: hidden;
+  white-space: nowrap;
+  height:35px;
+  width:100%;
+}
+.month-num{
+  height: 35px;
+  box-sizing: border-box;
+  display:inline-block;
+  font-size: 16px; 
+  width:60px;
+  text-align:center;
+}
+.month-num.active{
+  color: #f26f73;
+  border-bottom: 3px solid #f26f73;
+}
+.date-title{
+  height: 20px;
+  line-height: 20px;
+  background: #f5f5f5;
+  text-align: center;
+  font-size: 24rpx;
+  color: #666;
+}
+.date-content{
+  padding: 20rpx 0rpx; 
+  background: #fff;
+  height: 600rpx;
+}
+.day-item{
+  float:left;
+  width:14.25%;
+  height:100rpx;
+  font-size: 28rpx;
+  color: #ccc;
+  padding-top: 4rpx;
+  background: #fff;
+  text-align: center;
+  box-sizing:border-box;
+}
+.has-group{
+  height: 100%;
+  color: #333;
+}
+.clear{
+  clear: both;
+}
+.price{
+  font-size: 20rpx;
+  line-height: 24rpx;
+  color: #F58062;
+}
+.click-active{
+  height: 100%;
+  background: #f26f73;
+  color:#fff;
+}
+.click-active .price{
+  color: #fff;
+}
+
+
+
